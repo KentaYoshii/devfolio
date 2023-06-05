@@ -1,9 +1,22 @@
+import { Container } from "@mui/material";
+import NavBar from "./components/Navbar";
+import Introduction from "./components/Introduction";
+import Experience from "./components/Experience";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+
 const App = () => {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
+    <>
+      <NavBar />
+      <Container maxWidth="lg" sx={{ bgcolor: "lightblue" }}>
+        <Introduction />
+        <Experience />
+        <Projects />
+        <Skills />
+      </Container>
+    </>
+  );
 };
 
 export default App;
