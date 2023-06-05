@@ -1,9 +1,9 @@
-import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import Toolbar from "@mui/material/Toolbar";
-import { IconButton, Grid } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+import { IconButton, useMediaQuery } from "@mui/material";
 import {
   GrFacebook,
   GrGithub,
@@ -12,8 +12,10 @@ import {
 } from "react-icons/gr";
 
 const NavBar = () => {
+  const theme = useTheme();
+  const size = useMediaQuery(theme.breakpoints.up("sm"));
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", minHeight: "15vh" }}>
       <CssBaseline />
       <AppBar component="nav" sx={{ bgcolor: "#fff" }}>
         <Toolbar
@@ -27,6 +29,12 @@ const NavBar = () => {
             <IconButton
               href="https://www.facebook.com/kenta.yoshii.526/"
               target="_blank"
+              size={size ? "medium" : "small"}
+              sx={{
+                "&:hover": {
+                    color: "black"
+                  }
+              }}
             >
               <Box
                 justifyContent="center"
@@ -36,14 +44,18 @@ const NavBar = () => {
                   padding: 1,
                   border: 1,
                   borderRadius: "50%",
+                  ":hover": {
+                    color: "black"
+                  }
                 }}
               >
-                <GrFacebook />
+                <GrFacebook/>
               </Box>
             </IconButton>
             <IconButton
               href="https://drive.google.com/file/d/175vJ_iKJtQgWs7enTzS6EIrZLB_WzyMp/view?usp=sharing"
               target="_blank"
+              size={size ? "medium" : "small"}
             >
               <Box
                 justifyContent="center"
@@ -53,12 +65,19 @@ const NavBar = () => {
                   padding: 1,
                   border: 1,
                   borderRadius: "50%",
+                  ":hover": {
+                    color: "black"
+                  }
                 }}
               >
                 <GrDocumentText />
               </Box>
             </IconButton>
-            <IconButton href="https://github.com/KentaYoshii" target="_blank">
+            <IconButton
+              href="https://github.com/KentaYoshii"
+              target="_blank"
+              size={size ? "medium" : "small"}
+            >
               <Box
                 justifyContent="center"
                 alignItems="center"
@@ -67,6 +86,9 @@ const NavBar = () => {
                   padding: 1,
                   border: 1,
                   borderRadius: "50%",
+                  ":hover": {
+                    color: "black"
+                  }
                 }}
               >
                 <GrGithub />
@@ -75,6 +97,7 @@ const NavBar = () => {
             <IconButton
               href="https://www.linkedin.com/in/kentayoshii/"
               target="_blank"
+              size={size ? "medium" : "small"}
             >
               <Box
                 justifyContent="center"
@@ -84,6 +107,9 @@ const NavBar = () => {
                   padding: 1,
                   border: 1,
                   borderRadius: "50%",
+                  ":hover": {
+                    color: "black"
+                  }
                 }}
               >
                 <GrLinkedin />

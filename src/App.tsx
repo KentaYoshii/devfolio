@@ -8,8 +8,8 @@ import Skills from "./components/Skills";
 const App = () => {
   return (
     <>
-      <NavBar />
-      <Container maxWidth="lg" sx={{ bgcolor: "lightblue" }}>
+      <Container maxWidth="lg">
+        <NavBar />
         <Introduction />
         <Experience />
         <Projects />
