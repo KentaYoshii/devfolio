@@ -1,5 +1,5 @@
 const Skills = () => {
-  return <>d</>;
+  return <div>skill</div>;
 };
 
 export default Skills;

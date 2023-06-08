@@ -1,21 +1,22 @@
-import { Container } from "@mui/material";
-import NavBar from "./components/Navbar";
-import Introduction from "./components/Introduction";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
+import {
+  Route,
+  Routes,
+} from "react-router-dom";
+import Root from "./pages/Root";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Skills from "./pages/Skills";
+import Experience from "./pages/Experience";
 
 const App = () => {
   return (
-    <>
-      <Container maxWidth="lg">
-        <NavBar />
-        <Introduction />
-        <Experience />
-        <Projects />
-        <Skills />
-      </Container>
-    </>
+    <Routes>
+      <Route path="/" element={<Root />}/>
+      <Route path="/about" element={<About />}/>
+      <Route path="/projects" element={<Projects />} />
+      <Route path="/skills" element={<Skills />}/>
+      <Route path="/experience" element={<Experience />} />
+    </Routes>
   );
 };
 
