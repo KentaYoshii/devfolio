@@ -5,7 +5,7 @@ import TreeItem, { TreeItemProps, treeItemClasses } from "@mui/lab/TreeItem";
 import Collapse from "@mui/material/Collapse";
 import { useSpring, animated } from "@react-spring/web";
 import { TransitionProps } from "@mui/material/transitions";
-import { Link } from "@mui/material";
+import { Link, Box } from "@mui/material";
 
 function MinusSquare(props: SvgIconProps) {
   return (
@@ -75,70 +75,137 @@ const StyledTreeItem = styled((props: TreeItemProps) => (
 
 export default function CustomizedTreeView() {
   return (
-    <TreeView
-      aria-label="customized"
-      defaultExpanded={["1"]}
-      defaultCollapseIcon={<MinusSquare />}
-      defaultExpandIcon={<PlusSquare />}
-      defaultEndIcon={<CloseSquare />}
-      sx={{ height: 264, flexGrow: 1, maxWidth: "100vw", overflowY: "clip" }}
-    >
-      <StyledTreeItem nodeId="1" label="Main">
-        <StyledTreeItem
-          nodeId="2"
-          label={
-            <Link href="/about" underline="hover" color="InfoText">
-              About
-            </Link>
-          }
-        />
-        <StyledTreeItem
-          nodeId="3"
-          label={
-            <Link href="/experience" underline="hover" color="InfoText">
-              Experience
-            </Link>
-          }
-        />
-        <StyledTreeItem
-          nodeId="4"
-          label={
-            <Link href="/projects" underline="hover" color="InfoText">
-              Projects
-            </Link>
-          }
-        />
-        <StyledTreeItem
-          nodeId="5"
-          label={
-            <Link href="/skills" underline="hover" color="InfoText">
-              Skills
-            </Link>
-          }
-        />
-        <StyledTreeItem nodeId="6" label="Socials">
-          <StyledTreeItem nodeId="7" label={
-            <Link href="https://github.com/KentaYoshii" target="_blank" underline="hover" color="InfoText">
-              Github
-            </Link>
-          } />
-          <StyledTreeItem nodeId="8" label={
-            <Link href="https://www.linkedin.com/in/kentayoshii/" target="_blank" underline="hover" color="InfoText">
-              Linkedin
-            </Link>
-          } />
-          <StyledTreeItem nodeId="9" label={
-            <Link href="https://www.facebook.com/kenta.yoshii.526/" target="_blank" underline="hover" color="InfoText">
-              Facebook
-            </Link>
-          } />
-          <StyledTreeItem nodeId="10" label={
-            <Link href="https://www.youtube.com/channel/UCbtsINez6jBSFhiT35Zlt1g" target="_blank" underline="hover" color="InfoText">
-              YouTube
-            </Link>
-          } />
+    <Box>
+      <TreeView
+        aria-label="customized"
+        defaultExpanded={["0", "1", "6"]}
+        defaultCollapseIcon={<MinusSquare />}
+        defaultExpandIcon={<PlusSquare />}
+        defaultEndIcon={<CloseSquare />}
+        disableSelection
+        sx={{
+          height: "inherit",
+          flexGrow: 1,
+          overflowY: "clip",
+        }}
+      >
+        <StyledTreeItem nodeId="1" label="Main">
+          <StyledTreeItem nodeId="0" label="Me">
+            <StyledTreeItem
+              nodeId="2"
+              label={
+                <Link href="/about" underline="hover" color="white">
+                  About
+                </Link>
+              }
+            />
+            <StyledTreeItem
+              nodeId="11"
+              label={
+                <Link href="/about" underline="hover" color="white">
+                  CV
+                </Link>
+              }
+            />
+          </StyledTreeItem>
+          <StyledTreeItem
+            nodeId="3"
+            label={
+              <Link href="/experience" underline="hover" color="white">
+                Experience
+              </Link>
+            }
+          />
+          <StyledTreeItem
+            nodeId="4"
+            label={
+              <Link href="/projects" underline="hover" color="white">
+                Projects
+              </Link>
+            }
+          />
+          <StyledTreeItem
+            nodeId="5"
+            label={
+              <Link href="/skills" underline="hover" color="white">
+                Skills
+              </Link>
+            }
+          />
+          <StyledTreeItem
+              nodeId="12"
+              label="Blogs (soon)"
+              // label={
+              //   // <Link href="/about" underline="hover" color="white">
+              //     Blogs
+              //   // </Link>
+              // }
+            />
+            <StyledTreeItem
+              nodeId="13"
+              label="Library (soon)"
+              // label={
+              //   // <Link href="/about" underline="hover" color="white">
+              //     Library
+              //   // </Link>
+              // }
+            />
+          <StyledTreeItem nodeId="6" label="Socials">
+            <StyledTreeItem
+              nodeId="7"
+              label={
+                <Link
+                  href="https://github.com/KentaYoshii"
+                  target="_blank"
+                  underline="hover"
+                  color="white"
+                >
+                  Github
+                </Link>
+              }
+            />
+            <StyledTreeItem
+              nodeId="8"
+              label={
+                <Link
+                  href="https://www.linkedin.com/in/kentayoshii/"
+                  target="_blank"
+                  underline="hover"
+                  color="white"
+                >
+                  Linkedin
+                </Link>
+              }
+            />
+            <StyledTreeItem
+              nodeId="9"
+              label={
+                <Link
+                  href="https://www.facebook.com/kenta.yoshii.526/"
+                  target="_blank"
+                  underline="hover"
+                  color="white"
+                >
+                  Facebook
+                </Link>
+              }
+            />
+            <StyledTreeItem
+              nodeId="10"
+              label={
+                <Link
+                  href="https://www.youtube.com/channel/UCbtsINez6jBSFhiT35Zlt1g"
+                  target="_blank"
+                  underline="hover"
+                  color="white"
+                >
+                  YouTube
+                </Link>
+              }
+            />
+          </StyledTreeItem>
         </StyledTreeItem>
-      </StyledTreeItem>
-    </TreeView>
+      </TreeView>
+    </Box>
   );
 }
