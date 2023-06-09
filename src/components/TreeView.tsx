@@ -5,7 +5,7 @@ import TreeItem, { TreeItemProps, treeItemClasses } from "@mui/lab/TreeItem";
 import Collapse from "@mui/material/Collapse";
 import { useSpring, animated } from "@react-spring/web";
 import { TransitionProps } from "@mui/material/transitions";
-import { Link, Box, useMediaQuery } from "@mui/material";
+import { Link, Box, useMediaQuery, Typography } from "@mui/material";
 
 function MinusSquare(props: SvgIconProps) {
   return (
@@ -75,9 +75,6 @@ const StyledTreeItem = styled((props: TreeItemProps) => (
 
 export default function CustomizedTreeView() {
   const theme = useTheme();
-  const xs = useMediaQuery(theme.breakpoints.up("xs"))
-  const sm = useMediaQuery(theme.breakpoints.up("sm"));
-  const md = useMediaQuery(theme.breakpoints.up("md"));
   const lg = useMediaQuery(theme.breakpoints.up("lg"));
   return (
     <Box>
@@ -89,168 +86,192 @@ export default function CustomizedTreeView() {
         defaultEndIcon={<CloseSquare />}
         disableSelection
         sx={{
-          maxHeight: "inherit",
-          maxWidth: "inherit",
           flexGrow: 1,
-          overflowY: "scroll",
         }}
       >
         <StyledTreeItem nodeId="1" label="Main">
           <StyledTreeItem nodeId="0" label="Me">
             <StyledTreeItem
               nodeId="2"
-              sx={{
-                "& .MuiTreeItem-label": {
-                  fontSize: lg ? 25 : 20,
-                }
-              }}
               label={
-                <Link href="/about" underline="hover" color="white">
-                  About
+                <Link href="/about" underline="none" color="white">
+                  <Typography
+                    sx={{
+                      textDecoration: "underline",
+                      textDecorationColor: "#624CAB",
+                    }}
+                    display="inline"
+                  >
+                    About
+                  </Typography>
                 </Link>
               }
             />
             <StyledTreeItem
               nodeId="11"
-              sx={{
-                "& .MuiTreeItem-label": {
-                  fontSize: lg ? 25 : 20,
-                }
-              }}
               label={
-                <Link href="/about" underline="hover" color="white">
-                  CV
+                <Link href="/about" underline="none" color="white">
+                  <Typography
+                    sx={{
+                      textDecoration: "underline",
+                      textDecorationColor: "#624CAB",
+                    }}
+                    display="inline"
+                  >
+                    Résumé
+                  </Typography>
                 </Link>
               }
             />
           </StyledTreeItem>
           <StyledTreeItem
-          sx={{
-            "& .MuiTreeItem-label": {
-              fontSize: lg ? 25 : 20,
-            }
-          }}
             nodeId="3"
             label={
-              <Link href="/experience" underline="hover" color="white">
-                Experience
+              <Link href="/experience" underline="none" color="white">
+                <Typography
+                  sx={{
+                    textDecoration: "underline",
+                    textDecorationColor: "#624CAB",
+                  }}
+                  display="inline"
+                >
+                  Experience
+                </Typography>
               </Link>
             }
           />
           <StyledTreeItem
             nodeId="4"
-            sx={{
-              "& .MuiTreeItem-label": {
-                fontSize: lg ? 25 : 20,
-              }
-            }}
             label={
-              <Link href="/projects" underline="hover" color="white">
-                Projects
+              <Link href="/projects" underline="none" color="white">
+                <Typography
+                  sx={{
+                    textDecoration: "underline",
+                    textDecorationColor: "#624CAB",
+                  }}
+                  display="inline"
+                >
+                  Projects
+                </Typography>
               </Link>
             }
           />
           <StyledTreeItem
             nodeId="5"
-            sx={{
-              "& .MuiTreeItem-label": {
-                fontSize: lg ? 25 : 20,
-              }
-            }}
             label={
-              <Link href="/skills" underline="hover" color="white">
-                Skills
+              <Link href="/skills" underline="none" color="white">
+                <Typography
+                  sx={{
+                    textDecoration: "underline",
+                    textDecorationColor: "#624CAB",
+                  }}
+                  display="inline"
+                >
+                  Skills
+                </Typography>
               </Link>
             }
           />
           <StyledTreeItem
-              nodeId="12"
-              label="Blogs (soon)"
-              // label={
-              //   // <Link href="/about" underline="hover" color="white">
-              //     Blogs
-              //   // </Link>
-              // }
-            />
-            <StyledTreeItem
-              nodeId="13"
-              label="Library (soon)"
-              // label={
-              //   // <Link href="/about" underline="hover" color="white">
-              //     Library
-              //   // </Link>
-              // }
-            />
+            nodeId="12"
+            label="Blogs (stay tuned)"
+            // label={
+            //   // <Link href="/about" underline="hover" color="white">
+            //     Blogs
+            //   // </Link>
+            // }
+          />
+          <StyledTreeItem
+            nodeId="13"
+            label="Library (stay tuned)"
+            // label={
+            //   // <Link href="/about" underline="hover" color="white">
+            //     Library
+            //   // </Link>
+            // }
+          />
           <StyledTreeItem nodeId="6" label="Socials">
             <StyledTreeItem
               nodeId="7"
-              sx={{
-                "& .MuiTreeItem-label": {
-                  fontSize: lg ? 25 : 20,
-                }
-              }}
               label={
                 <Link
                   href="https://github.com/KentaYoshii"
                   target="_blank"
-                  underline="hover"
+                  underline="none"
                   color="white"
                 >
-                  Github
+                  <Typography
+                    sx={{
+                      textDecoration: "underline",
+                      textDecorationColor: "#624CAB",
+                    }}
+                    display="inline"
+                  >
+                    Github
+                  </Typography>
                 </Link>
               }
             />
             <StyledTreeItem
               nodeId="8"
-              sx={{
-                "& .MuiTreeItem-label": {
-                  fontSize: lg ? 25 : 20,
-                }
-              }}
               label={
                 <Link
                   href="https://www.linkedin.com/in/kentayoshii/"
                   target="_blank"
-                  underline="hover"
+                  underline="none"
                   color="white"
                 >
-                  Linkedin
+                  <Typography
+                    sx={{
+                      textDecoration: "underline",
+                      textDecorationColor: "#624CAB",
+                    }}
+                    display="inline"
+                  >
+                    Linkedin
+                  </Typography>
                 </Link>
               }
             />
             <StyledTreeItem
               nodeId="9"
-              sx={{
-                "& .MuiTreeItem-label": {
-                  fontSize: lg ? 25 : 20,
-                }
-              }}
               label={
                 <Link
                   href="https://www.facebook.com/kenta.yoshii.526/"
                   target="_blank"
-                  underline="hover"
+                  underline="none"
                   color="white"
                 >
-                  Facebook
+                  <Typography
+                    sx={{
+                      textDecoration: "underline",
+                      textDecorationColor: "#624CAB",
+                    }}
+                    display="inline"
+                  >
+                    Facebook
+                  </Typography>
                 </Link>
               }
             />
             <StyledTreeItem
               nodeId="10"
-              sx={{
-                "& .MuiTreeItem-label": {
-                  fontSize: lg ? 25 : 20,
-                }
-              }}
               label={
                 <Link
                   href="https://www.youtube.com/channel/UCbtsINez6jBSFhiT35Zlt1g"
                   target="_blank"
-                  underline="hover"
+                  underline="none"
                   color="white"
                 >
-                  YouTube
+                  <Typography
+                    sx={{
+                      textDecoration: "underline",
+                      textDecorationColor: "#624CAB",
+                    }}
+                    display="inline"
+                  >
+                    YouTube
+                  </Typography>
                 </Link>
               }
             />

@@ -21,7 +21,7 @@ const App = () => {
           },
         }}
       >
-        <Grid container height="90vh">
+        <Grid container minHeight="90vh">
           <Routes>
             <Route path="/" element={<Root />} />
             <Route path="/about" element={<About />} />

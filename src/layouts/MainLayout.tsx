@@ -14,7 +14,7 @@ const MainLayout: React.FC<{ children: JSX.Element | JSX.Element[] }> = ({
           backgroundSize: "cover",
           backgroundPosition: "center",
           overflow: "hidden",
-          height: "100vh",
+          minHeight: "100vh",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",

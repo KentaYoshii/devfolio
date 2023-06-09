@@ -72,4 +72,24 @@ theme.typography.h3 = {
   },
 };
 
+theme.typography.body1 = {
+  fontSize: '1.3rem',
+  '@media (min-width:600px)': {
+    fontSize: '1.5rem',
+  },
+  [theme.breakpoints.up('md')]: {
+    fontSize: '1.8rem',
+  },
+}
+
+theme.typography.body2 = {
+  fontSize: '0.8rem',
+  '@media (min-width:600px)': {
+    fontSize: '1.1rem',
+  },
+  [theme.breakpoints.up('md')]: {
+    fontSize: '1.3rem',
+  },
+}
+
 export default theme;

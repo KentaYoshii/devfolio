@@ -9,15 +9,19 @@ const Root = () => {
   const [showFS, setShowFS] = useState(false);
   const sm = useMediaQuery(theme.breakpoints.up("sm"));
   const md = useMediaQuery(theme.breakpoints.up("md"));
-  setTimeout(() => {
-    setShowFS(true);
-  }, 6000);
+  const visited = localStorage.getItem("visited");
+  setTimeout(
+    () => {
+      setShowFS(true);
+    },
+    visited !== "false" ? 2500 : 6000
+  );
   return (
     <Grid item xs={12}>
       <Box
         sx={{
           backgroundColor: "rgba(0, 0, 0, 0.5)",
-          height: md ? "90%" : "100%",
+          height: "100%",
           borderRadius: {
             xs: "30px",
             sm: "30px",
@@ -28,52 +32,94 @@ const Root = () => {
         }}
       >
         <Grid container>
-          <Grid item xs={12} ml={3} mt={2}>
-            <Box alignItems="center" justifyContent="left" display="flex">
-              <Typography variant={sm ? "h5" : "body1"}>
-                <TypeAnimation
-                  sequence={[">  Welcome"]}
-                  speed={60}
-                  cursor={false}
-                />
-              </Typography>
-            </Box>
-          </Grid>
-          <Grid item xs={12} ml={3} mt={0}>
-            <Box alignItems="center" justifyContent="left" display="flex">
-              <Typography variant={sm ? "h5" : "body1"}>
-                <TypeAnimation
-                  speed={60}
-                  sequence={[1000, ">  My name is Kenta Yoshii"]}
-                  cursor={false}
-                />
-              </Typography>
-            </Box>
-          </Grid>
-          <Grid item xs={12} ml={3} mt={0}>
-            <Box alignItems="center" justifyContent="left" display="flex">
-              <Typography variant={sm ? "h5" : "body1"}>
-                <TypeAnimation
-                  speed={60}
-                  sequence={[2400, ">  View the files for more information"]}
-                  cursor={false}
-                />
-              </Typography>
-            </Box>
-          </Grid>
-          <Grid item xs={12} ml={3} mt={0}>
-            <Box alignItems="center" justifyContent="left" display="flex">
-              <Typography variant={sm ? "h5" : "body1"}>
-                <TypeAnimation sequence={[4500, ">  ls -R"]} cursor={false} />
-              </Typography>
-            </Box>
-          </Grid>
+          {visited !== "false" ? (
+            <>
+              <Grid item xs={12} ml={3} mt={2}>
+                <Box alignItems="center" justifyContent="left" display="flex">
+                  <Typography variant={sm ? "h5" : "body1"}>
+                    <TypeAnimation
+                      sequence={[">  Welcome back"]}
+                      speed={60}
+                      cursor={false}
+                    />
+                  </Typography>
+                </Box>
+              </Grid>
+              <Grid item xs={12} ml={3} mt={0} mb={10}>
+                <Box alignItems="center" justifyContent="left" display="flex">
+                  <Typography variant={sm ? "h5" : "body1"}>
+                    <TypeAnimation
+                      sequence={[1000, ">  ls -R"]}
+                      speed={60}
+                      cursor={false}
+                    />
+                  </Typography>
+                </Box>
+              </Grid>
+            </>
+          ) : (
+            <>
+              <Grid item xs={12} ml={3} mt={2}>
+                <Box alignItems="center" justifyContent="left" display="flex">
+                  <Typography variant={sm ? "h5" : "body1"}>
+                    <TypeAnimation
+                      sequence={[">  Welcome"]}
+                      speed={60}
+                      cursor={false}
+                    />
+                  </Typography>
+                </Box>
+              </Grid>
+              <Grid item xs={12} ml={3} mt={0}>
+                <Box alignItems="center" justifyContent="left" display="flex">
+                  <Typography variant={sm ? "h5" : "body1"}>
+                    <TypeAnimation
+                      speed={60}
+                      sequence={[1000, ">  My name is Kenta Yoshii"]}
+                      cursor={false}
+                    />
+                  </Typography>
+                </Box>
+              </Grid>
+              <Grid item xs={12} ml={3} mt={0}>
+                <Box alignItems="center" justifyContent="left" display="flex">
+                  <Typography variant={sm ? "h5" : "body1"}>
+                    <TypeAnimation
+                      speed={60}
+                      sequence={[
+                        2400,
+                        ">  View the files for more information",
+                      ]}
+                      cursor={false}
+                    />
+                  </Typography>
+                </Box>
+              </Grid>
+              <Grid item xs={12} ml={3} mt={0}>
+                <Box alignItems="center" justifyContent="left" display="flex">
+                  <Typography variant={sm ? "h5" : "body1"}>
+                    <TypeAnimation
+                      sequence={[4500, ">  ls -R"]}
+                      cursor={false}
+                    />
+                  </Typography>
+                </Box>
+              </Grid>
+            </>
+          )}
           {showFS && (
-            <Grid item xs={12} ml={3} mt={md ? 10 : 10}>
-              <Box alignItems="center" justifyContent="center" display="flex">
-                <CustomizedTreeView />
-              </Box>
-            </Grid>
+            <>
+              <Grid item xs={12} ml={3} mt={md ? 10 : 10} mb={5}>
+                <Box
+                  alignItems="center"
+                  justifyContent="center"
+                  display="flex"
+                  overflow="auto"
+                >
+                  <CustomizedTreeView />
+                </Box>
+              </Grid>
+            </>
           )}
         </Grid>
       </Box>

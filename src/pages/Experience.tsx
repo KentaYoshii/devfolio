@@ -1,4 +1,5 @@
 const Experience = () => {
+  localStorage.setItem('visited', 'true');
   return (
     <div>ex</div>
   )
