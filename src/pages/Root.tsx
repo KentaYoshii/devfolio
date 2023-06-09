@@ -45,7 +45,7 @@ const Root = () => {
                   </Typography>
                 </Box>
               </Grid>
-              <Grid item xs={12} ml={3} mt={0} mb={10}>
+              <Grid item xs={12} ml={3} mt={0} mb={5}>
                 <Box alignItems="center" justifyContent="left" display="flex">
                   <Typography variant={sm ? "h5" : "body1"}>
                     <TypeAnimation
