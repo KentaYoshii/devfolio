@@ -1,11 +1,11 @@
 import SvgIcon, { SvgIconProps } from "@mui/material/SvgIcon";
-import { alpha, styled } from "@mui/material/styles";
+import { alpha, styled, useTheme } from "@mui/material/styles";
 import TreeView from "@mui/lab/TreeView";
 import TreeItem, { TreeItemProps, treeItemClasses } from "@mui/lab/TreeItem";
 import Collapse from "@mui/material/Collapse";
 import { useSpring, animated } from "@react-spring/web";
 import { TransitionProps } from "@mui/material/transitions";
-import { Link, Box } from "@mui/material";
+import { Link, Box, useMediaQuery } from "@mui/material";
 
 function MinusSquare(props: SvgIconProps) {
   return (
@@ -74,6 +74,11 @@ const StyledTreeItem = styled((props: TreeItemProps) => (
 }));
 
 export default function CustomizedTreeView() {
+  const theme = useTheme();
+  const xs = useMediaQuery(theme.breakpoints.up("xs"))
+  const sm = useMediaQuery(theme.breakpoints.up("sm"));
+  const md = useMediaQuery(theme.breakpoints.up("md"));
+  const lg = useMediaQuery(theme.breakpoints.up("lg"));
   return (
     <Box>
       <TreeView
@@ -84,15 +89,21 @@ export default function CustomizedTreeView() {
         defaultEndIcon={<CloseSquare />}
         disableSelection
         sx={{
-          height: "inherit",
+          maxHeight: "inherit",
+          maxWidth: "inherit",
           flexGrow: 1,
-          overflowY: "clip",
+          overflowY: "scroll",
         }}
       >
         <StyledTreeItem nodeId="1" label="Main">
           <StyledTreeItem nodeId="0" label="Me">
             <StyledTreeItem
               nodeId="2"
+              sx={{
+                "& .MuiTreeItem-label": {
+                  fontSize: lg ? 25 : 20,
+                }
+              }}
               label={
                 <Link href="/about" underline="hover" color="white">
                   About
@@ -101,6 +112,11 @@ export default function CustomizedTreeView() {
             />
             <StyledTreeItem
               nodeId="11"
+              sx={{
+                "& .MuiTreeItem-label": {
+                  fontSize: lg ? 25 : 20,
+                }
+              }}
               label={
                 <Link href="/about" underline="hover" color="white">
                   CV
@@ -109,6 +125,11 @@ export default function CustomizedTreeView() {
             />
           </StyledTreeItem>
           <StyledTreeItem
+          sx={{
+            "& .MuiTreeItem-label": {
+              fontSize: lg ? 25 : 20,
+            }
+          }}
             nodeId="3"
             label={
               <Link href="/experience" underline="hover" color="white">
@@ -118,6 +139,11 @@ export default function CustomizedTreeView() {
           />
           <StyledTreeItem
             nodeId="4"
+            sx={{
+              "& .MuiTreeItem-label": {
+                fontSize: lg ? 25 : 20,
+              }
+            }}
             label={
               <Link href="/projects" underline="hover" color="white">
                 Projects
@@ -126,6 +152,11 @@ export default function CustomizedTreeView() {
           />
           <StyledTreeItem
             nodeId="5"
+            sx={{
+              "& .MuiTreeItem-label": {
+                fontSize: lg ? 25 : 20,
+              }
+            }}
             label={
               <Link href="/skills" underline="hover" color="white">
                 Skills
@@ -153,6 +184,11 @@ export default function CustomizedTreeView() {
           <StyledTreeItem nodeId="6" label="Socials">
             <StyledTreeItem
               nodeId="7"
+              sx={{
+                "& .MuiTreeItem-label": {
+                  fontSize: lg ? 25 : 20,
+                }
+              }}
               label={
                 <Link
                   href="https://github.com/KentaYoshii"
@@ -166,6 +202,11 @@ export default function CustomizedTreeView() {
             />
             <StyledTreeItem
               nodeId="8"
+              sx={{
+                "& .MuiTreeItem-label": {
+                  fontSize: lg ? 25 : 20,
+                }
+              }}
               label={
                 <Link
                   href="https://www.linkedin.com/in/kentayoshii/"
@@ -179,6 +220,11 @@ export default function CustomizedTreeView() {
             />
             <StyledTreeItem
               nodeId="9"
+              sx={{
+                "& .MuiTreeItem-label": {
+                  fontSize: lg ? 25 : 20,
+                }
+              }}
               label={
                 <Link
                   href="https://www.facebook.com/kenta.yoshii.526/"
@@ -192,6 +238,11 @@ export default function CustomizedTreeView() {
             />
             <StyledTreeItem
               nodeId="10"
+              sx={{
+                "& .MuiTreeItem-label": {
+                  fontSize: lg ? 25 : 20,
+                }
+              }}
               label={
                 <Link
                   href="https://www.youtube.com/channel/UCbtsINez6jBSFhiT35Zlt1g"
