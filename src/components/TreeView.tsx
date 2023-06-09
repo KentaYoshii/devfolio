@@ -110,7 +110,7 @@ export default function CustomizedTreeView() {
             <StyledTreeItem
               nodeId="11"
               label={
-                <Link href="/about" underline="none" color="white">
+                <Link href="/resume" underline="none" color="white">
                   <Typography
                     sx={{
                       textDecoration: "underline",

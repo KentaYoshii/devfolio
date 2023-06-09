@@ -14,7 +14,7 @@ const Root = () => {
     () => {
       setShowFS(true);
     },
-    visited !== "false" ? 2500 : 6000
+    visited === "true" ? 2500 : 6000
   );
   return (
     <Grid item xs={12}>
@@ -32,7 +32,7 @@ const Root = () => {
         }}
       >
         <Grid container>
-          {visited !== "false" ? (
+          {visited === "true" ? (
             <>
               <Grid item xs={12} ml={3} mt={2}>
                 <Box alignItems="center" justifyContent="left" display="flex">
