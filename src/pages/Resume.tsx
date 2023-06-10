@@ -19,11 +19,11 @@ type PDFFile = string | File | null;
 
 const ResumePage = () => {
   const [file, setFile] = useState<PDFFile>(resume);
-  localStorage.setItem('visited', 'true')
+  localStorage.setItem("visited", "true");
   const theme = useTheme();
-  const xl = useMediaQuery(theme.breakpoints.up('xl'));
-  const lg = useMediaQuery(theme.breakpoints.up('lg'));
-  const sm = useMediaQuery(theme.breakpoints.up('sm'));
+  const xl = useMediaQuery(theme.breakpoints.up("xl"));
+  const lg = useMediaQuery(theme.breakpoints.up("lg"));
+  const sm = useMediaQuery(theme.breakpoints.up("sm"));
   return (
     <Grid item xs={12}>
       <Box
@@ -57,19 +57,28 @@ const ResumePage = () => {
           <Grid item xs={12}>
             <Divider />
           </Grid>
+          <Grid item xs={12} mt={5}>
+            <Box alignItems="center" justifyContent="center" display="flex">
+              <Button 
+              href="https://drive.google.com/file/d/1Gv0loIgXhjzCcGj8midX2oymWMkYtc_1/view?usp=sharing"
+              variant="outlined"
+              color="inherit"
+              sx={{
+                color: "white"
+              }}
+              target="_blank"
+              >
+                Download
+              </Button>
+            </Box>
+          </Grid>
           <Grid item xs={12} mb={5} mt={5}>
             <Box alignItems="center" justifyContent="center" display="flex">
-              <Document
-                file={file}
-                options={options}
-              >
-                <Page pageNumber={1} scale={
-                    xl ? 1.5 : (
-                        lg ? 1.0 : (
-                            sm ? 0.8 : 0.5
-                        )
-                    )
-                }/>
+              <Document file={file} options={options}>
+                <Page
+                  pageNumber={1}
+                  scale={xl ? 1.5 : lg ? 1.0 : sm ? 0.8 : 0.5}
+                />
               </Document>
             </Box>
           </Grid>
