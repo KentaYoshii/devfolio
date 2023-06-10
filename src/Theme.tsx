@@ -92,4 +92,14 @@ theme.typography.body2 = {
   },
 }
 
+theme.typography.caption = {
+  fontSize: '0.7rem',
+  '@media (min-width:600px)': {
+    fontSize: '0.8rem',
+  },
+  [theme.breakpoints.up('md')]: {
+    fontSize: '0.9rem',
+  },
+}
+
 export default theme;

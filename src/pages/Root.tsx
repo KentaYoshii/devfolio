@@ -109,7 +109,7 @@ const Root = () => {
           )}
           {showFS && (
             <>
-              <Grid item xs={12} ml={3} mt={md ? 10 : 10} mb={5}>
+              <Grid item xs={12} ml={3} mt={5} mb={5}>
                 <Box
                   alignItems="center"
                   justifyContent="center"
