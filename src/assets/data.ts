@@ -2,6 +2,7 @@ import hennge_logo from "./experience/hennge_logo.png";
 import plaid_logo from "./experience/plaid_logo.png";
 import sie_logo from "./experience/sie_logo.png";
 import bloomberg_logo from "./experience/bloomberg_logo.png";
+import brown_logo from "./experience/brown_logo.png";
 
 interface Experience {
     companyName: string,
@@ -32,7 +33,7 @@ export const experience: Experience[] = [
         loc: "Tokyo, Japan",
         role: "Software Engineer Intern",
         shortDescription: "Implemented real-time and scalable messaging cloud applications to be used in internal communication tool. Developed using SaaS, SSO, PWA and DevOps pipeline",
-        skills: ["Express", "React", "AWS", "Terraform"],
+        skills: ["TypeScript", "DynamoDB", "S3", "Docker", "Redis", "React", "AWS", "Terraform"],
         iconURL: hennge_logo,
     },
     {
@@ -42,7 +43,7 @@ export const experience: Experience[] = [
         loc: "Tokyo, Japan",
         role: "Software Engineer Intern",
         shortDescription: "Implemented user settings by reconstructing system logic and models using Node.js and MongoDB. Verified new releases by developing and running E2E tests using Chai.js and Selenium WebDriver",
-        skills: ["Chai.js", "Selenium", "Rust"],
+        skills: ["JavaScript", "Selenium", "Chai", "Docker"],
         iconURL: plaid_logo,
     },
     {
@@ -52,7 +53,17 @@ export const experience: Experience[] = [
         loc: "Tokyo, Japan",
         role: "Software Engineer Intern",
         shortDescription: "Implemented working prototype of new messaging feature to be added to the PlayStation Network using MERN stack. Worked in an agile scrum team of 6 to define scope of feature, design mockups, and implement both the interface and the backend.",
-        skills: ["MERN"],
+        skills: ["MongoDB", "TypeScript", "Node", "React", "Agile"],
         iconURL: sie_logo,
+    },
+    {
+        companyName: "Brown University",
+        from: "Sep 2021",
+        to: "present",
+        loc: "Providence, RI",
+        role: "Undergraduate Teaching Assistant",
+        shortDescription: "Teaching Assistant for JAPN0100, JAPN0200, CS0200 (Data Structures and Algorithm) and CS1680 (Computer Networks). Held weekly conceptual, debugging, and grading sessions.",
+        skills: ["Debugging", "Teaching", "Grading"],
+        iconURL: brown_logo,
     }
 ]

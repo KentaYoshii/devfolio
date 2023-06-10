@@ -6,7 +6,7 @@ import {
   TimelineDot,
   TimelineContent,
 } from "@mui/lab";
-import { Avatar, Grid, Typography, Box } from "@mui/material";
+import { Avatar, Grid, Typography, Box, Divider, Chip } from "@mui/material";
 import { experience } from "../assets/data";
 
 const ExperienceTL = () => {
@@ -55,7 +55,21 @@ const ExperienceTL = () => {
                 </Box>
               </Grid>
             </Grid>
-            <Typography variant="caption">{ele.shortDescription}</Typography>
+            <Grid item xs={12}>
+              <Box alignItems="center" display="flex" justifyContent="left">
+                <Typography variant="caption">
+                  {ele.shortDescription}
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={12} mt={1}>
+                <Divider />
+            </Grid>
+            <Grid item xs={12}>
+                {ele.skills.map((skill, idx) => (
+                    <Chip label={skill} key={idx} variant="outlined" sx={{margin: 0.5}}/>
+                ))}
+            </Grid>
           </TimelineContent>
         </TimelineItem>
       ))}

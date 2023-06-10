@@ -2,9 +2,11 @@ import { useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
-import { Grid, Box, Divider, Button, useMediaQuery } from "@mui/material";
+import { Grid, Box, Divider, Button, useMediaQuery, IconButton } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import resume from "../assets/KENTA_RESUME_JUNE.pdf";
+import ArrowDropUp from "@mui/icons-material/ArrowDropUp";
+import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.js",
@@ -42,16 +44,11 @@ const ResumePage = () => {
         <Grid container>
           <Grid item xs={12} ml={2} mt={1}>
             <Box>
-              <Button
+              <IconButton
                 href="/"
-                color="inherit"
-                sx={{
-                  textTransform: "lowercase",
-                  fontSize: 20,
-                }}
               >
-                cd ~ (back)
-              </Button>
+                <ArrowLeftIcon />
+              </IconButton>
             </Box>
           </Grid>
           <Grid item xs={12}>
@@ -80,6 +77,23 @@ const ResumePage = () => {
                   scale={xl ? 1.5 : lg ? 1.0 : sm ? 0.8 : 0.5}
                 />
               </Document>
+            </Box>
+          </Grid>
+          <Grid item xs={12}>
+            <Divider />
+          </Grid>
+          <Grid item xs={12} mt={1} mb={3}>
+            <Box alignItems="center" display="center" justifyContent="center">
+              <IconButton
+                onClick={() => {
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                  });
+                }}
+              >
+                <ArrowDropUp fontSize="large" />
+              </IconButton>
             </Box>
           </Grid>
         </Grid>

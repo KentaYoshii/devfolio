@@ -1,21 +1,26 @@
 import {
   Box,
   Grid,
-  Button,
   useMediaQuery,
   Divider,
-  Avatar,
-  Stack,
   Typography,
-  Link,
+  IconButton,
+  Grow,
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import me from "../assets/me.jpg";
-
+import ArrowDropUp from "@mui/icons-material/ArrowDropUp";
+import ArrowLeft from "@mui/icons-material/ArrowLeft";
+import { TypeAnimation } from "react-type-animation";
+import { useState } from "react";
+import AboutContent from "../components/AboutContent";
 const About = () => {
+  const [to, setTO] = useState(false);
   localStorage.setItem("visited", "true");
   const theme = useTheme();
   const size = useMediaQuery(theme.breakpoints.up("sm"));
+  setTimeout(() => {
+    setTO(true);
+  }, 1500);
   return (
     <Grid item xs={12}>
       <Box
@@ -34,209 +39,45 @@ const About = () => {
         <Grid container>
           <Grid item xs={12} ml={2} mt={1}>
             <Box>
-              <Button
-                href="/"
-                color="inherit"
-                sx={{
-                  textTransform: "lowercase",
-                  fontSize: 20,
-                }}
-              >
-                cd ~ (back)
-              </Button>
+              <IconButton href="/">
+                <ArrowLeft />
+              </IconButton>
             </Box>
           </Grid>
           <Grid item xs={12}>
             <Divider />
           </Grid>
-          <Grid item xs={12} mt={5}>
-            <Box alignItems="center" display="flex" justifyContent="center">
-              <Avatar
-                src={me}
-                sx={{
-                  width: {
-                    xs: "140px",
-                    sm: "180px",
-                    md: "180px",
-                    lg: "200px",
-                    xl: "240px",
-                  },
-                  height: {
-                    xs: "140px",
-                    sm: "180px",
-                    md: "180px",
-                    lg: "200px",
-                    xl: "240px",
-                  },
-                }}
-              />
+          <Grid item xs={12} ml={3} mt={2}>
+            <Box alignItems="center" justifyContent="left" display="flex">
+              <Typography variant={size ? "h5" : "body1"}>
+                <TypeAnimation
+                  sequence={[">  cat About"]}
+                  speed={60}
+                  cursor={false}
+                />
+              </Typography>
             </Box>
           </Grid>
-          <Grid item xs={12} mt={5} ml={size ? 10 : 5} mr={size ? 10 : 5}>
-            <Box alignItems="center" justifyContent="left" display="flex">
-              <Stack direction="column" spacing={2} mb={5}>
-                <Typography>
-                  <Typography
-                    sx={{
-                      textDecoration: "underline",
-                      textDecorationColor: "#624CAB",
-                    }}
-                    display="inline"
-                  >
-                    Hello!
-                  </Typography>
-                </Typography>
-                <Typography variant="body2">
-                  My name is{" "}
-                  <Typography
-                    sx={{
-                      textDecoration: "underline",
-                      textDecorationColor: "#624CAB",
-                    }}
-                    display="inline"
-                  >
-                    Kenta Yoshii
-                  </Typography>{" "}
-                  and welcome to my website. This is where I share with you my
-                  life, passion, and cretion.
-                </Typography>
-                <Typography variant="body2">
-                  I am from Tokyo, Japan and currently a senior at{" "}
-                  <Typography
-                    sx={{
-                      textDecoration: "underline",
-                      textDecorationColor: "#624CAB",
-                    }}
-                    display="inline"
-                  >
-                    <Link
-                      sx={{ color: "white" }}
-                      underline="none"
-                      href="https://www.brown.edu/"
-                      target="_blank"
-                    >
-                      Brown University
-                    </Link>
-                  </Typography>{" "}
-                  studying Computer Science.
-                </Typography>
-                <Typography variant="body2">
-                  I am mainly interested in{" "}
-                  <Typography
-                    sx={{
-                      textDecoration: "underline",
-                      textDecorationColor: "#624CAB",
-                    }}
-                    display="inline"
-                  >
-                    Computer Systems
-                  </Typography>
-                  , and{" "}
-                  <Typography
-                    sx={{
-                      textDecoration: "underline",
-                      textDecorationColor: "#624CAB",
-                    }}
-                    display="inline"
-                  >
-                    Software Development
-                  </Typography>
-                  , but also have experience in other areas such as Machine
-                  Learning and Cryptography.
-                </Typography>
-                <Typography variant="body2">
-                  Previously, I have worked at{" "}
-                  <Typography
-                    sx={{
-                      textDecoration: "underline",
-                      textDecorationColor: "#624CAB",
-                    }}
-                    display="inline"
-                  >
-                    <Link
-                      sx={{ color: "white" }}
-                      underline="none"
-                      href="https://sonyinteractive.com/en/"
-                      target="_blank"
-                    >
-                      Sony Interactive Entertainment
-                    </Link>
-                  </Typography>{" "}
-                  building full stack web application, at{" "}
-                  <Typography
-                    sx={{
-                      textDecoration: "underline",
-                      textDecorationColor: "#624CAB",
-                    }}
-                    display="inline"
-                  >
-                    <Link
-                      sx={{ color: "white" }}
-                      underline="none"
-                      href="https://plaid.co.jp/en/"
-                      target="_blank"
-                    >
-                      Plaid
-                    </Link>
-                  </Typography>{" "}
-                  working on document database, and at{" "}
-                  <Typography
-                    sx={{
-                      textDecoration: "underline",
-                      textDecorationColor: "#624CAB",
-                    }}
-                    display="inline"
-                  >
-                    <Link
-                      sx={{ color: "white" }}
-                      underline="none"
-                      href="https://hennge.com/global/"
-                      target="_blank"
-                    >
-                      Hennge
-                    </Link>
-                  </Typography>{" "}
-                  gaining experience in DevOps and Cloud Engineering. Please go
-                  to my experience page for more information.
-                </Typography>
-                <Typography variant="body2">
-                  In my free time, I like going on{" "}
-                  <Typography
-                    sx={{
-                      textDecoration: "underline",
-                      textDecorationColor: "#624CAB",
-                    }}
-                    display="inline"
-                  >
-                    long runs
-                  </Typography>
-                  , reading{" "}
-                  <Typography
-                    sx={{
-                      textDecoration: "underline",
-                      textDecorationColor: "#624CAB",
-                    }}
-                    display="inline"
-                  >
-                    classic and mystery books
-                  </Typography>
-                  , and lying down and do nothing for an extend period of time.
-                  I am also a{" "}
-                  <Typography
-                    sx={{
-                      textDecoration: "underline",
-                      textDecorationColor: "#624CAB",
-                    }}
-                    display="inline"
-                  >
-                    foodie
-                  </Typography>{" "}
-                  and on a constant search of new cafe or restaurants to visit.
-                </Typography>
-                <Typography variant="body2">
-                  Feel free to reach out to me via /Main/Socials/*
-                </Typography>
-              </Stack>
+          <Grow in={to}>
+            <Grid item xs={12}>
+              <AboutContent />
+            </Grid>
+          </Grow>
+          <Grid item xs={12}>
+            <Divider />
+          </Grid>
+          <Grid item xs={12} mt={1} mb={3}>
+            <Box alignItems="center" display="center" justifyContent="center">
+              <IconButton
+                onClick={() => {
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                  });
+                }}
+              >
+                <ArrowDropUp fontSize="large" />
+              </IconButton>
             </Box>
           </Grid>
         </Grid>
