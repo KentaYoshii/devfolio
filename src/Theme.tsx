@@ -98,7 +98,7 @@ theme.typography.caption = {
     fontSize: '0.8rem',
   },
   [theme.breakpoints.up('md')]: {
-    fontSize: '0.9rem',
+    fontSize: '1rem',
   },
 }
 
