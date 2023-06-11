@@ -1,8 +1,17 @@
+// Experiences
 import hennge_logo from "./experience/hennge_logo.png";
 import plaid_logo from "./experience/plaid_logo.png";
 import sie_logo from "./experience/sie_logo.png";
 import bloomberg_logo from "./experience/bloomberg_logo.png";
 import brown_logo from "./experience/brown_logo.png";
+
+// Projects
+import ip_tcp_thumb from "./projects/thumbnail/IP_TCP.png";
+import modist_thumb from "./projects/thumbnail/MoDist.png";
+import ssh_thumb from "./projects/thumbnail/SSH.png";
+import tclone_thumb from "./projects/thumbnail/TClone.png";
+import weenix_thumb from "./projects/thumbnail/Weenix.png";
+import animorphs_thumb from "./projects/thumbnail/Animorphs.png";
 
 interface Experience {
     companyName: string,
@@ -14,6 +23,45 @@ interface Experience {
     skills: string[],
     iconURL: string,
 }
+
+interface IProjects {
+    name: string,
+    description: string,
+    thumbnail: string,
+}
+
+export const ProjectsD: IProjects[] = [
+    {
+        name: "WeenixOS",
+        description: "A full operating system kernel, based on Unix",
+        thumbnail: weenix_thumb,
+    },
+    {
+        name: "MoDist",
+        description: "A Distributed Key-Value Storing System ",
+        thumbnail: modist_thumb,
+    },
+    {
+        name: "IP-TCP",
+        description: "RFC-compliant implementation of IP/TCP",
+        thumbnail: ip_tcp_thumb,
+    },
+    {
+        name: "BigDawsSSH",
+        description: "SSH with Transport and Authentication Layer",
+        thumbnail: ssh_thumb,
+    },
+    {
+        name: "Twitter-Clone",
+        description: "Twitter-like full stack web app with DevOps pipeline",
+        thumbnail: tclone_thumb,
+    },
+    {
+        name: "Animorphs",
+        description: "New encoding technique for NVIDIA StyleGAN",
+        thumbnail: animorphs_thumb,
+    }
+]
 
 export const language = [
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
