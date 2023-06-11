@@ -62,6 +62,16 @@ const theme = createTheme({
   },
 });
 
+theme.typography.h2 = {
+  fontSize: '2.2rem',
+  '@media (min-width:600px)': {
+    fontSize: '2.4rem',
+  },
+  [theme.breakpoints.up('md')]: {
+    fontSize: '2.6rem',
+  },
+};
+
 theme.typography.h3 = {
   fontSize: '1.6rem',
   '@media (min-width:600px)': {
@@ -123,7 +133,7 @@ theme.typography.body2 = {
 }
 
 theme.typography.caption = {
-  fontSize: '0.6rem',
+  fontSize: '0.9rem',
   '@media (min-width:600px)': {
     fontSize: '0.9rem',
   },

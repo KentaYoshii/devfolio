@@ -17,7 +17,7 @@ const App = () => {
           width: {
             sm: "90vw",
             xs: "90vw",
-            md: "60vw",
+            md: "80vw",
             lg: "60vw",
             xl: "60vw",
           },

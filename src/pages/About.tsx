@@ -51,7 +51,7 @@ const About = () => {
             <Box alignItems="center" justifyContent="left" display="flex">
               <Typography variant={size ? "body2" : "body1"}>
                 <TypeAnimation
-                  sequence={["$  cat /About"]}
+                  sequence={["$ whoami"]}
                   speed={60}
                   cursor={false}
                 />

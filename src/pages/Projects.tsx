@@ -58,7 +58,7 @@ const Projects = () => {
           </Grid>
           <Grid item xs={12} ml={3} mt={2} mb={5}>
             <Box alignItems="center" justifyContent="left" display="flex">
-              <Typography variant={size ? "h5" : "body1"}>
+              <Typography variant={size ? "body2" : "body1"}>
                 <TypeAnimation
                   sequence={["$  cat /Projects -R"]}
                   speed={60}
@@ -91,7 +91,7 @@ const Projects = () => {
                           <Typography gutterBottom variant="h5" component="div">
                             {project.name}
                           </Typography>
-                          <Typography variant="body2" color="text.secondary">
+                          <Typography variant="caption" color="text.secondary">
                             {project.description}
                           </Typography>
                         </CardContent>

@@ -74,10 +74,10 @@ export const ProjectsD: IProjects[] = [
 export const ProjectMap = new Map<string, IProjectDetail>([
     ["WeenixOS", {
         name: "WeenixOS",
-        overview: "In Spring 2022, I took a class in Operating Systems at Brown University. As part of that class, I developed the majority of a operating system kernel known as Weenix.",
-        stack: ["C"],
+        overview: "In Spring 2022, I took a class in Operating Systems at Brown University. As part of that class, I developed the majority of a operating system kernel known as Weenix. This is one of the projects that I am proud of finishing :)",
+        stack: ["C Programming Language"],
         repo: "",
-        note: "This project was developed in CS1690 Operating Systems",
+        note: "This project was developed in CS1690 Operating Systems. Due to Brown University's Academic Code, the source code is not available to public. You can reach out to me if you are interested.",
     }],
     ["MoDist", {
         name: "MoDist",
