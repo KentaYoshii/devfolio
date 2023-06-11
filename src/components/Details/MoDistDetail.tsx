@@ -1,13 +1,11 @@
-import { Typography, Grid, Box, List, ListItem, Link } from "@mui/material";
-import weenix_one from "../../assets/projects/details/weenix/weenix1.png";
-import weenix_two from "../../assets/projects/details/weenix/weenix2.png";
+import { Grid, Box, Typography, List, ListItem, Link } from "@mui/material";
 
-const WeenixDetail = () => {
+const MoDistDetail = () => {
   return (
     <Grid container>
       <Grid item xs={12}>
         <Box justifyContent="left" display="flex" alignItems="center">
-          <Typography variant="caption">Weenix consists of 5 parts</Typography>
+          <Typography variant="caption">MoDist consists of 5 parts</Typography>
         </Box>
       </Grid>
       <Grid item xs={12}>
@@ -30,9 +28,9 @@ const WeenixDetail = () => {
                 }}
                 display="inline"
               >
-                <strong>Procs</strong>
+                <strong>Clocks</strong>
               </Typography>
-              : Threads, processes, and synchronization primitives
+              : Conflict resolution based on Vector Clocks and Physical Clocks
             </Typography>
           </ListItem>
           <ListItem>
@@ -45,10 +43,9 @@ const WeenixDetail = () => {
                 }}
                 display="inline"
               >
-                <strong>Drivers</strong>
+                <strong>Leaderless Replication</strong>
               </Typography>
-              : Device drivers for terminals, disks, and the memory devices
-              /dev/zero and /dev/null.
+              : Leaderless replication using read/write quorum to tolerate failures. Read repair to bring slow peers up to speed. 
             </Typography>
           </ListItem>
           <ListItem>
@@ -61,10 +58,9 @@ const WeenixDetail = () => {
                 }}
                 display="inline"
               >
-                <strong>Virtual File System</strong>
+                <strong>Partitioning</strong>
               </Typography>
-              : A common interface between the operating system kernel and the
-              various file systems (such as S5FS and device drivers).
+              : Implemented object keys distribution strategy based on <strong>Consistent Hashing</strong> with minimal keys transfer in the event of a peer joining/leaving.
             </Typography>
           </ListItem>
           <ListItem>
@@ -77,10 +73,9 @@ const WeenixDetail = () => {
                 }}
                 display="inline"
               >
-                <strong>System V File System</strong>
+                <strong>Tapestry</strong>
               </Typography>
-              : File System implementation based on the original Unix file
-              system
+              : Implemented <Link href="https://pdos.csail.mit.edu/~strib/docs/tapestry/tapestry_jsac03.pdf">Tapestry</Link> that utilizes simple prefix-based routing to store and retrieve objects across multiple nodes.
             </Typography>
           </ListItem>
           <ListItem>
@@ -93,12 +88,9 @@ const WeenixDetail = () => {
                 }}
                 display="inline"
               >
-                <strong>Virtual Memory</strong>
+                <strong>Raft</strong>
               </Typography>
-              : Implement virtual memory maps, page fault handler, anonymous and
-              shadow objects, and systems calls such as fork(). With these, the
-              Weenix kernel is able to manage user address spaces, run
-              user-level code and service system calls
+              : Implemented <Link href="https://raft.github.io/raft.pdf">Raft</Link> to realize leader-based replication with all its features such as Leader Election, Log Replication, and Log Commitment.
             </Typography>
           </ListItem>
         </List>
@@ -107,12 +99,12 @@ const WeenixDetail = () => {
         <Typography variant="caption" mt={2}>
           Overall, this was a very fun project to work on. I think this project
           really helped me understand how kernel operates behind the scenes and
-          also hone my problem solving skills and system programming in general. 
+          also hone my problem solving skills and system programming in general.
         </Typography>
       </Grid>
       <Grid item xs={12} margin={5}>
         <Box alignItems="center" display="flex" justifyContent="center">
-          <Box component="img" src={weenix_one} width="85%" />
+          <Box component="img" src={""} width="85%" />
         </Box>
       </Grid>
       <Grid item xs={12}>
@@ -124,7 +116,7 @@ const WeenixDetail = () => {
       </Grid>
       <Grid item xs={12} margin={5}>
         <Box alignItems="center" display="flex" justifyContent="center">
-          <Box component="img" src={weenix_two} width="85%" />
+          <Box component="img" src={""} width="85%" />
         </Box>
       </Grid>
       <Grid item xs={12} mb={2}>
@@ -136,8 +128,15 @@ const WeenixDetail = () => {
       </Grid>
       <Grid item xs={12} mb={2}>
         <Box display="flex" alignItems="center" justifyContent="center">
-          <Typography variant="caption" >
-            If you want to learn more, please go check out the <Link href="https://github.com/brown-cs1690/handout/wiki/Weenix-Operating-System" target="_blank">official documentation</Link>!
+          <Typography variant="caption">
+            If you want to learn more, please go check out the{" "}
+            <Link
+              href="https://github.com/brown-cs1690/handout/wiki/Weenix-Operating-System"
+              target="_blank"
+            >
+              official documentation
+            </Link>
+            !
           </Typography>
         </Box>
       </Grid>
@@ -145,4 +144,4 @@ const WeenixDetail = () => {
   );
 };
 
-export default WeenixDetail;
+export default MoDistDetail;

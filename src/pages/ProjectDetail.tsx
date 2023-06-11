@@ -18,11 +18,14 @@ import { useState } from "react";
 
 // Details
 import WeenixDetail from "../components/Details/WeenixDetail";
+import MoDistDetail from "../components/Details/MoDistDetail";
 
 const returnDetail = (project: string) => {
   switch (project) {
     case "WeenixOS":
       return <WeenixDetail />;
+    case "MoDist":
+      return <MoDistDetail />;
   }
 };
 
@@ -93,7 +96,7 @@ const ProjectDetail = () => {
           >
             <Grid container>
               <Grid item xs={12} ml={3} mr={3} mt={1} mb={1}>
-                <Box alignItems="center" display="flex" justifyContent="left">
+                <Box alignItems="center" display="flex" justifyContent="center">
                   <Typography variant="h2">{projectDetail.name}</Typography>
                 </Box>
                 <Box
@@ -115,7 +118,7 @@ const ProjectDetail = () => {
                   margin={3}
                 >
                   {projectDetail.stack.map((stack, idx) => (
-                    <Chip label={stack} key={idx} />
+                    <Chip label={stack} key={idx} variant="outlined" sx={{margin: 0.5}}/>
                   ))}
                 </Box>
               </Grid>
