@@ -30,6 +30,14 @@ interface IProjects {
     thumbnail: string,
 }
 
+interface IProjectDetail {
+    name: string,
+    overview: string,
+    stack: string[],
+    repo: string,
+    note: string,
+}
+
 export const ProjectsD: IProjects[] = [
     {
         name: "WeenixOS",
@@ -61,7 +69,52 @@ export const ProjectsD: IProjects[] = [
         description: "New encoding technique for NVIDIA StyleGAN",
         thumbnail: animorphs_thumb,
     }
-]
+];
+
+export const ProjectMap = new Map<string, IProjectDetail>([
+    ["WeenixOS", {
+        name: "WeenixOS",
+        overview: "In Spring 2022, I took a class in Operating Systems at Brown University. As part of that class, I developed the majority of a operating system kernel known as Weenix.",
+        stack: ["C"],
+        repo: "",
+        note: "This project was developed in CS1690 Operating Systems",
+    }],
+    ["MoDist", {
+        name: "MoDist",
+        overview: "In Spring 2022, I took a class in Distributed Systems at Brown University. As part of that class, I developed a distributed Key-Value store system also known as Modular Distributed System for Learning.",
+        stack: ["GoLang", "gRPC"],
+        repo: "",
+        note: "This project was developed in CS1380 Distributed Systems",
+    }],
+    ["IP-TCP", {
+        name: "IP-TCP",
+        overview: "In Fall 2021, I took a class in Computer Networks at Brown University. As part of that class, I developed an RFC-compliant Internet Protocol (IP) and Transmission Control Protocol (TCP) on top of the said IP",
+        stack: ["Golang"],
+        repo: "https://github.com/KentaYoshii/ip-tcp",
+        note: "This project was developed in CS1680 Computer Networks",
+    }],
+    ["BigDawsSSH", {
+        name: "BigDawsSSH",
+        overview: "In Secure Shell, before the client can go about doing their business, certain protcols need to be observed. This project explored the said protocls, namely Transport and Authentication Protocol.",
+        stack: ["Golang"],
+        repo: "https://github.com/KentaYoshii/BigDawsSSH",
+        note: "This project was my final project for CS1515 Applied Cryptography",
+    }],
+    ["Twitter-Clone", {
+        name: "Twitter-Clone",
+        overview: "Twitter-like full stack web app that supports users tweeting and connecting with one another. This app is then deployed to AWS with Terraform and using CI/CD pipeline.",
+        stack: ["express", "TypeScript", "React", "Terraform", "AWS", "Redis"],
+        repo: "https://github.com/KentaYoshii/twitter",
+        note: "This project was developed at Hennge during my 4-week internship",
+    }],
+    ["Animorphs", {
+        name: "Animorphs",
+        overview: "A project that explored different image encoding techniques with the goal of reproducing similar images using NVIDIA's StyleGAN. Tested with human faces, cats, cars, and art objects",
+        stack: ["python", "TensorFlow", "PyTorch"],
+        repo: "https://github.com/KentaYoshii/Animorphs",
+        note: "This project was my final project for CS1430 Computer Vision",
+    }],
+]);
 
 export const language = [
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",

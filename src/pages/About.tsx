@@ -49,9 +49,9 @@ const About = () => {
           </Grid>
           <Grid item xs={12} ml={3} mt={2}>
             <Box alignItems="center" justifyContent="left" display="flex">
-              <Typography variant={size ? "h5" : "body1"}>
+              <Typography variant={size ? "body2" : "body1"}>
                 <TypeAnimation
-                  sequence={[">  cat About"]}
+                  sequence={["$  cat /About"]}
                   speed={60}
                   cursor={false}
                 />

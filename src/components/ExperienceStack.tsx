@@ -31,17 +31,17 @@ const ExperienceStack = () => {
             </Grid>
             <Grid item xs={12} mt={0.5}>
               <Box justifyContent="center" display="flex" alignItems="center">
-                <Typography variant="subtitle1">{ele.role}</Typography>
+                <Typography variant="subtitle1" color="GrayText">{ele.role}</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} mt={0.5} paddingRight={0.5}>
               <Box justifyContent="right" display="flex" alignItems="center">
-                <Typography variant="caption">{`${ele.from}-${ele.to}`}</Typography>
+                <Typography variant="subtitle1" color="GrayText">{`${ele.from}-${ele.to},`}</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} mt={0.5} paddingLeft={0.5}>
               <Box justifyContent="left" display="flex" alignItems="center">
-                <Typography variant="caption">{ele.loc}</Typography>
+                <Typography variant="subtitle1" color="GrayText">{ele.loc}</Typography>
               </Box>
             </Grid>
             <Grid item xs={12} mt={0.5}>
@@ -52,17 +52,12 @@ const ExperienceStack = () => {
                 marginRight={3}
                 marginLeft={3}
               >
-                <Typography variant="subtitle2">
+                <Typography variant="body1">
                   {ele.shortDescription}
                 </Typography>
               </Box>
             </Grid>
             <Grid container mt={0.5} rowSpacing={2}>
-              {/* <Box justifyContent="center" display="flex" alignItems="center">
-                {ele.skills.map((skill, idx) => (
-                  <Chip label={skill} key={idx} />
-                ))}
-              </Box> */}
               {ele.skills.map((skill, idx) => (
                 <Grid item xs={4}>
                   <Box

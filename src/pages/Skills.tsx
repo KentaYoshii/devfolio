@@ -50,9 +50,9 @@ const Skills = () => {
           </Grid>
           <Grid item xs={12} ml={3} mt={2}>
             <Box alignItems="center" justifyContent="left" display="flex">
-              <Typography variant={sm ? "h5" : "body1"}>
+              <Typography variant={sm ? "body2" : "body1"}>
                 <TypeAnimation
-                  sequence={[">  cat Skills"]}
+                  sequence={["$  cat /Skills"]}
                   speed={60}
                   cursor={false}
                 />
@@ -67,7 +67,7 @@ const Skills = () => {
             <Grid container>
               <Grid item xs={12} mb={2} mt={5}>
                 <Box alignItems="center" display="flex" justifyContent="center">
-                  <Typography>Languages</Typography>
+                  <Typography variant="h3">Languages</Typography>
                 </Box>
               </Grid>
               <Grid
@@ -104,7 +104,7 @@ const Skills = () => {
               </Grid>
               <Grid item xs={12} mb={2} mt={2}>
                 <Box alignItems="center" display="flex" justifyContent="center">
-                  <Typography>Backend</Typography>
+                  <Typography variant="h3">Backend</Typography>
                 </Box>
               </Grid>
               <Grid
@@ -141,7 +141,7 @@ const Skills = () => {
               </Grid>
               <Grid item xs={12} mb={2} mt={2}>
                 <Box alignItems="center" display="flex" justifyContent="center">
-                  <Typography>Frontend</Typography>
+                  <Typography variant="h3">Frontend</Typography>
                 </Box>
               </Grid>
               <Grid
@@ -178,7 +178,7 @@ const Skills = () => {
               </Grid>
               <Grid item xs={12} mb={2} mt={2}>
                 <Box alignItems="center" display="flex" justifyContent="center">
-                  <Typography>Dev-Ops</Typography>
+                  <Typography variant="h3">Dev-Ops</Typography>
                 </Box>
               </Grid>
               <Grid
@@ -215,7 +215,7 @@ const Skills = () => {
               </Grid>
               <Grid item xs={12} mb={2} mt={2}>
                 <Box alignItems="center" display="flex" justifyContent="center">
-                  <Typography>Other</Typography>
+                  <Typography variant="h3">Other</Typography>
                 </Box>
               </Grid>
               <Grid

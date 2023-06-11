@@ -55,9 +55,9 @@ const Experience = () => {
           </Grid>
           <Grid item xs={12} ml={3} mt={2}>
             <Box alignItems="center" justifyContent="left" display="flex">
-              <Typography variant={sm ? "h5" : "body1"}>
+              <Typography variant={sm ? "body2" : "body1"}>
                 <TypeAnimation
-                  sequence={[">  cat Experience"]}
+                  sequence={["$  cat /Experience"]}
                   speed={60}
                   cursor={false}
                 />

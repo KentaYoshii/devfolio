@@ -36,9 +36,9 @@ const Root = () => {
             <>
               <Grid item xs={12} ml={3} mt={2}>
                 <Box alignItems="center" justifyContent="left" display="flex">
-                  <Typography variant={sm ? "h5" : "body1"}>
+                  <Typography variant={sm ? "body2" : "body1"}>
                     <TypeAnimation
-                      sequence={[">  Welcome back"]}
+                      sequence={["$  Welcome back"]}
                       speed={60}
                       cursor={false}
                     />
@@ -47,9 +47,9 @@ const Root = () => {
               </Grid>
               <Grid item xs={12} ml={3} mt={0} mb={5}>
                 <Box alignItems="center" justifyContent="left" display="flex">
-                  <Typography variant={sm ? "h5" : "body1"}>
+                  <Typography variant={sm ? "body2" : "body1"}>
                     <TypeAnimation
-                      sequence={[1000, ">  ls -R"]}
+                      sequence={[1000, "$  ls -R"]}
                       speed={60}
                       cursor={false}
                     />
@@ -61,9 +61,9 @@ const Root = () => {
             <>
               <Grid item xs={12} ml={3} mt={2}>
                 <Box alignItems="center" justifyContent="left" display="flex">
-                  <Typography variant={sm ? "h5" : "body1"}>
+                  <Typography variant={sm ? "body2" : "body1"}>
                     <TypeAnimation
-                      sequence={[">  Welcome"]}
+                      sequence={["$  Welcome"]}
                       speed={60}
                       cursor={false}
                     />
@@ -72,10 +72,10 @@ const Root = () => {
               </Grid>
               <Grid item xs={12} ml={3} mt={0}>
                 <Box alignItems="center" justifyContent="left" display="flex">
-                  <Typography variant={sm ? "h5" : "body1"}>
+                  <Typography variant={sm ? "body2" : "body1"}>
                     <TypeAnimation
                       speed={60}
-                      sequence={[1000, ">  My name is Kenta Yoshii"]}
+                      sequence={[1000, "$  My name is Kenta Yoshii"]}
                       cursor={false}
                     />
                   </Typography>
@@ -83,12 +83,12 @@ const Root = () => {
               </Grid>
               <Grid item xs={12} ml={3} mt={0}>
                 <Box alignItems="center" justifyContent="left" display="flex">
-                  <Typography variant={sm ? "h5" : "body1"}>
+                  <Typography variant={sm ? "body2" : "body1"}>
                     <TypeAnimation
                       speed={60}
                       sequence={[
                         2400,
-                        ">  View the files for more information",
+                        "$  View the files for more information",
                       ]}
                       cursor={false}
                     />
@@ -97,9 +97,9 @@ const Root = () => {
               </Grid>
               <Grid item xs={12} ml={3} mt={0}>
                 <Box alignItems="center" justifyContent="left" display="flex">
-                  <Typography variant={sm ? "h5" : "body1"}>
+                  <Typography variant={sm ? "body2" : "body1"}>
                     <TypeAnimation
-                      sequence={[4500, ">  ls -R"]}
+                      sequence={[4500, "$  ls -R"]}
                       cursor={false}
                     />
                   </Typography>

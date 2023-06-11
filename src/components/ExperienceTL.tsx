@@ -57,7 +57,7 @@ const ExperienceTL = () => {
             </Grid>
             <Grid item xs={12}>
               <Box alignItems="center" display="flex" justifyContent="left">
-                <Typography variant="caption">
+                <Typography variant="body2">
                   {ele.shortDescription}
                 </Typography>
               </Box>
@@ -65,7 +65,7 @@ const ExperienceTL = () => {
             <Grid item xs={12} mt={1}>
                 <Divider />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} mt={1}>
                 {ele.skills.map((skill, idx) => (
                     <Chip label={skill} key={idx} variant="outlined" sx={{margin: 0.5}}/>
                 ))}

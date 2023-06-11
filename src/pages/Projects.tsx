@@ -60,7 +60,7 @@ const Projects = () => {
             <Box alignItems="center" justifyContent="left" display="flex">
               <Typography variant={size ? "h5" : "body1"}>
                 <TypeAnimation
-                  sequence={[">  cat Projects"]}
+                  sequence={["$  cat /Projects -R"]}
                   speed={60}
                   cursor={false}
                 />
