@@ -1,4 +1,6 @@
 import { Grid, Box, Typography, List, ListItem, Link } from "@mui/material";
+import tapestry from "../../assets/projects/details/modist/tapestry.png";
+import raft from "../../assets/projects/details/modist/raft.png";
 
 const MoDistDetail = () => {
   return (
@@ -97,32 +99,30 @@ const MoDistDetail = () => {
       </Grid>
       <Grid item xs={12}>
         <Typography variant="caption" mt={2}>
-          Overall, this was a very fun project to work on. I think this project
-          really helped me understand how kernel operates behind the scenes and
-          also hone my problem solving skills and system programming in general.
+          Through MoDist, I was able to understand not only the core distrbuted systems concepts such as replication, partitioning, routing, and so on, but also pros and cons of differet kinds of architectures that are used in today's world.
         </Typography>
       </Grid>
       <Grid item xs={12} margin={5}>
         <Box alignItems="center" display="flex" justifyContent="center">
-          <Box component="img" src={""} width="85%" />
+          <Box component="img" src={tapestry} width="85%" />
         </Box>
       </Grid>
       <Grid item xs={12}>
         <Box display="flex" alignItems="center" justifyContent="center">
           <Typography variant="subtitle1" color="GrayText">
-            Weenix
+            Tapestry 
           </Typography>
         </Box>
       </Grid>
       <Grid item xs={12} margin={5}>
         <Box alignItems="center" display="flex" justifyContent="center">
-          <Box component="img" src={""} width="85%" />
+          <Box component="img" src={raft} width="85%" />
         </Box>
       </Grid>
       <Grid item xs={12} mb={2}>
         <Box display="flex" alignItems="center" justifyContent="center">
           <Typography variant="subtitle1" color="GrayText">
-            Weenix Shutdown
+            Raft, leader-based replication
           </Typography>
         </Box>
       </Grid>
@@ -131,7 +131,7 @@ const MoDistDetail = () => {
           <Typography variant="caption">
             If you want to learn more, please go check out the{" "}
             <Link
-              href="https://github.com/brown-cs1690/handout/wiki/Weenix-Operating-System"
+              href="https://cs.brown.edu/courses/cs138/s23/assignments.html"
               target="_blank"
             >
               official documentation

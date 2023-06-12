@@ -81,7 +81,7 @@ export const ProjectMap = new Map<string, IProjectDetail>([
     }],
     ["MoDist", {
         name: "MoDist",
-        overview: "In Spring 2022, I took a class in Distributed Systems at Brown University. As part of that class, I developed a distributed Key-Value store system also known as Modular Distributed System for Learning.",
+        overview: "In Spring 2022, I took a class in Distributed Systems at Brown University. As part of that class, I developed a distributed Key-Value store system also known as Modular Distributed System for Learning (MoDist).",
         stack: ["GoLang", "gRPC"],
         repo: "",
         note: "This project was developed in CS1380 Distributed Systems. Due to Brown University's Academic Code, the source code is not available to public. You can reach out to me if you are interested.",
