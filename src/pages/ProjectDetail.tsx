@@ -19,6 +19,7 @@ import { useState } from "react";
 // Details
 import WeenixDetail from "../components/Details/WeenixDetail";
 import MoDistDetail from "../components/Details/MoDistDetail";
+import IPTCPDetail from "../components/Details/IPTCPDetail";
 
 const returnDetail = (project: string) => {
   switch (project) {
@@ -26,6 +27,8 @@ const returnDetail = (project: string) => {
       return <WeenixDetail />;
     case "MoDist":
       return <MoDistDetail />;
+    case "IP-TCP":
+      return <IPTCPDetail />;
   }
 };
 
@@ -118,7 +121,12 @@ const ProjectDetail = () => {
                   margin={3}
                 >
                   {projectDetail.stack.map((stack, idx) => (
-                    <Chip label={stack} key={idx} variant="outlined" sx={{margin: 0.5}}/>
+                    <Chip
+                      label={stack}
+                      key={idx}
+                      variant="outlined"
+                      sx={{ margin: 0.5 }}
+                    />
                   ))}
                 </Box>
               </Grid>
