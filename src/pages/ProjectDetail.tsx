@@ -20,6 +20,7 @@ import { useState } from "react";
 import WeenixDetail from "../components/Details/WeenixDetail";
 import MoDistDetail from "../components/Details/MoDistDetail";
 import IPTCPDetail from "../components/Details/IPTCPDetail";
+import BigDawsSSHDetail from "../components/Details/BigDawsSSHDetail";
 
 const returnDetail = (project: string) => {
   switch (project) {
@@ -29,6 +30,8 @@ const returnDetail = (project: string) => {
       return <MoDistDetail />;
     case "IP-TCP":
       return <IPTCPDetail />;
+    case "BigDawsSSH":
+      return <BigDawsSSHDetail />;
   }
 };
 
