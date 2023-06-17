@@ -1,6 +1,4 @@
 import { Typography, Grid, Box, List, ListItem, Link } from "@mui/material";
-import weenix_one from "../../assets/projects/details/weenix/weenix1.png";
-import weenix_two from "../../assets/projects/details/weenix/weenix2.png";
 
 const BigDawsSSHDetail = () => {
   return (
