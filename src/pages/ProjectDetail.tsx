@@ -1,4 +1,3 @@
-import { ArrowLeft } from "@mui/icons-material";
 import {
   Grid,
   Box,
@@ -13,6 +12,8 @@ import { useParams } from "react-router-dom";
 import { useTheme } from "@mui/material/styles";
 import { TypeAnimation } from "react-type-animation";
 import ArrowDropUp from "@mui/icons-material/ArrowDropUp";
+import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import { ProjectMap } from "../assets/data";
 import { useState } from "react";
 
@@ -77,9 +78,14 @@ const ProjectDetail = () => {
       >
         <Grid container>
           <Grid item xs={12} ml={2} mt={1}>
-            <Box>
+            <Box display="inline">
+              <IconButton href="/">
+                <KeyboardDoubleArrowLeftIcon />
+              </IconButton>
+            </Box>
+            <Box display="inline">
               <IconButton href="/projects">
-                <ArrowLeft />
+                <KeyboardArrowLeftIcon />
               </IconButton>
             </Box>
           </Grid>

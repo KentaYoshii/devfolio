@@ -7,7 +7,7 @@ import {
   Grow,
   useMediaQuery,
 } from "@mui/material";
-import ArrowLeft from "@mui/icons-material/ArrowLeft";
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import ArrowDropUp from "@mui/icons-material/ArrowDropUp";
 import { TypeAnimation } from "react-type-animation";
 import { useTheme } from "@mui/material/styles";
@@ -41,7 +41,7 @@ const Skills = () => {
           <Grid item xs={12} ml={2} mt={1}>
             <Box>
               <IconButton href="/">
-                <ArrowLeft />
+                <KeyboardArrowLeftIcon />
               </IconButton>
             </Box>
           </Grid>

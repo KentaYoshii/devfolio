@@ -9,7 +9,8 @@ import {
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import ArrowDropUp from "@mui/icons-material/ArrowDropUp";
-import ArrowLeft from "@mui/icons-material/ArrowLeft";
+import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import { TypeAnimation } from "react-type-animation";
 import { useState } from "react";
 import AboutContent from "../components/AboutContent";
@@ -38,9 +39,9 @@ const About = () => {
       >
         <Grid container>
           <Grid item xs={12} ml={2} mt={1}>
-            <Box>
+            <Box display="inline">
               <IconButton href="/">
-                <ArrowLeft />
+                <KeyboardDoubleArrowLeftIcon />
               </IconButton>
             </Box>
           </Grid>

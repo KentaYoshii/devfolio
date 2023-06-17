@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 
 import { useTheme } from "@mui/material/styles";
-import ArrowLeft from "@mui/icons-material/ArrowLeft";
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import ArrowDropUp from "@mui/icons-material/ArrowDropUp";
 import { TypeAnimation } from "react-type-animation";
 import { useState } from "react";
@@ -46,7 +46,7 @@ const Projects = () => {
           <Grid item xs={12} ml={2} mt={1}>
             <Box>
               <IconButton href="/">
-                <ArrowLeft />
+                <KeyboardArrowLeftIcon />
               </IconButton>
             </Box>
           </Grid>

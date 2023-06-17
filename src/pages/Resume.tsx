@@ -6,7 +6,7 @@ import { Grid, Box, Divider, Button, useMediaQuery, IconButton } from "@mui/mate
 import { useTheme } from "@mui/material/styles";
 import resume from "../assets/KENTA_RESUME_JUNE.pdf";
 import ArrowDropUp from "@mui/icons-material/ArrowDropUp";
-import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
+import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.js",
@@ -47,7 +47,7 @@ const ResumePage = () => {
               <IconButton
                 href="/"
               >
-                <ArrowLeftIcon />
+                <KeyboardDoubleArrowLeftIcon />
               </IconButton>
             </Box>
           </Grid>

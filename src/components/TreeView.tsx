@@ -80,7 +80,7 @@ export default function CustomizedTreeView() {
     <Box>
       <TreeView
         aria-label="customized"
-        defaultExpanded={["0", "1", "6"]}
+        defaultExpanded={["0", "1", "4", "6"]}
         defaultCollapseIcon={<MinusSquare />}
         defaultExpandIcon={<PlusSquare />}
         defaultEndIcon={<CloseSquare />}
@@ -155,7 +155,104 @@ export default function CustomizedTreeView() {
                 </Typography>
               </Link>
             }
+          >
+            <StyledTreeItem
+            nodeId="14"
+            label={
+              <Link href="/projects/WeenixOS" underline="none" color="white">
+                <Typography
+                  sx={{
+                    textDecoration: "underline",
+                    textDecorationColor: "#624CAB",
+                  }}
+                  display="inline"
+                >
+                  WeenixOS
+                </Typography>
+              </Link>
+            }
           />
+          <StyledTreeItem
+            nodeId="15"
+            label={
+              <Link href="/projects/MoDist" underline="none" color="white">
+                <Typography
+                  sx={{
+                    textDecoration: "underline",
+                    textDecorationColor: "#624CAB",
+                  }}
+                  display="inline"
+                >
+                  MoDist
+                </Typography>
+              </Link>
+            }
+          />
+          <StyledTreeItem
+            nodeId="16"
+            label={
+              <Link href="/projects/IP-TCP" underline="none" color="white">
+                <Typography
+                  sx={{
+                    textDecoration: "underline",
+                    textDecorationColor: "#624CAB",
+                  }}
+                  display="inline"
+                >
+                  IP-TCP
+                </Typography>
+              </Link>
+            }
+          />
+          <StyledTreeItem
+            nodeId="17"
+            label={
+              <Link href="/projects/Twitter-Clone" underline="none" color="white">
+                <Typography
+                  sx={{
+                    textDecoration: "underline",
+                    textDecorationColor: "#624CAB",
+                  }}
+                  display="inline"
+                >
+                  Twitter-Clone
+                </Typography>
+              </Link>
+            }
+          />
+          <StyledTreeItem
+            nodeId="18"
+            label={
+              <Link href="/projects/BigDawsSSH" underline="none" color="white">
+                <Typography
+                  sx={{
+                    textDecoration: "underline",
+                    textDecorationColor: "#624CAB",
+                  }}
+                  display="inline"
+                >
+                  BigDawsSSH
+                </Typography>
+              </Link>
+            }
+          />
+          <StyledTreeItem
+            nodeId="19"
+            label={
+              <Link href="/projects/Animorphs" underline="none" color="white">
+                <Typography
+                  sx={{
+                    textDecoration: "underline",
+                    textDecorationColor: "#624CAB",
+                  }}
+                  display="inline"
+                >
+                  Animorphs
+                </Typography>
+              </Link>
+            }
+          />
+          </StyledTreeItem>
           <StyledTreeItem
             nodeId="5"
             label={

@@ -14,7 +14,7 @@ import { useState } from "react";
 import ExperienceTL from "../components/ExperienceTL";
 import ExperienceStack from "../components/ExperienceStack";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
-import ArrowLeft from "@mui/icons-material/ArrowLeft";
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 
 const Experience = () => {
   const theme = useTheme();
@@ -46,7 +46,7 @@ const Experience = () => {
             <IconButton
                 href="/"
               >
-                <ArrowLeft />
+                <KeyboardArrowLeftIcon />
               </IconButton>
             </Box>
           </Grid>
