@@ -22,6 +22,7 @@ import MoDistDetail from "../components/Details/MoDistDetail";
 import IPTCPDetail from "../components/Details/IPTCPDetail";
 import BigDawsSSHDetail from "../components/Details/BigDawsSSHDetail";
 import TwitterCloneDetail from "../components/Details/TwitterCloneDetail";
+import AnimorphsDetail from "../components/Details/AnimorphsDetail";
 
 const returnDetail = (project: string) => {
   switch (project) {
@@ -35,6 +36,8 @@ const returnDetail = (project: string) => {
       return <BigDawsSSHDetail />;
     case "Twitter-Clone":
       return <TwitterCloneDetail />;
+    case "Animorphs":
+      return <AnimorphsDetail />;
   }
 };
 
