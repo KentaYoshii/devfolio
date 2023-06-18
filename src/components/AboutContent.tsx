@@ -63,7 +63,7 @@ const AboutContent = () => {
               >
                 Kenta Yoshii
               </Typography>{" "}
-              and welcome to my website. This is where I share with you my life,
+              and welcome to my website! This is where I share with you my life,
               passion, and cretion.
             </Typography>
             <Typography variant="body2">
