@@ -12,8 +12,8 @@ import { useParams } from "react-router-dom";
 import { useTheme } from "@mui/material/styles";
 import { TypeAnimation } from "react-type-animation";
 import ArrowDropUp from "@mui/icons-material/ArrowDropUp";
-import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
-import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import { ProjectMap } from "../assets/data";
 import { useState } from "react";
 
@@ -129,21 +129,20 @@ const ProjectDetail = () => {
                     sx={{ fontStyle: "italic" }}
                   >{`${projectDetail.note}`}</Typography>
                 </Box>
-                <Box
-                  alignItems="center"
-                  display="flex"
-                  justifyContent="center"
-                  margin={3}
-                >
+                <Grid container>
                   {projectDetail.stack.map((stack, idx) => (
-                    <Chip
-                      label={stack}
-                      key={idx}
-                      variant="outlined"
-                      sx={{ margin: 0.5 }}
-                    />
+                    <Grid item xs={4} sm={3} lg={2}>
+                      <Box alignItems="center" justifyContent="space-evenly" display="flex">
+                        <Chip
+                          label={stack}
+                          key={idx}
+                          variant="outlined"
+                          sx={{ margin: 0.5 }}
+                        />
+                      </Box>
+                    </Grid>
                   ))}
-                </Box>
+                </Grid>
               </Grid>
               <Grid item xs={12}>
                 <Divider variant="middle" light={true} />
