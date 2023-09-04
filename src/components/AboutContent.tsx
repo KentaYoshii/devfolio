@@ -145,7 +145,7 @@ const AboutContent = () => {
                   Plaid
                 </Link>
               </Typography>{" "}
-              working on document database, and at{" "}
+              working on document database, at{" "}
               <Typography
                 sx={{
                   textDecoration: "underline",
@@ -162,8 +162,25 @@ const AboutContent = () => {
                   Hennge
                 </Link>
               </Typography>{" "}
-              gaining experience in DevOps and Cloud Engineering. Please go to
-              my experience page for more information.
+              gaining experience in DevOps and Cloud Engineering and at{" "}
+              <Typography
+                sx={{
+                  textDecoration: "underline",
+                  textDecorationColor: "#624CAB",
+                }}
+                display="inline"
+              >
+                <Link
+                  sx={{ color: "white" }}
+                  underline="none"
+                  href="https://www.bloomberg.com/"
+                  target="_blank"
+                >
+                  Bloomberg
+                </Link>
+              </Typography>{" "}
+              building modern market feeds parser pipeline component for parsing
+              market data. Please go to my experience page for more information.
             </Typography>
             <Typography variant="body2">
               In my free time, I like going on{" "}

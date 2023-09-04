@@ -171,17 +171,18 @@ export const other = [
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg",
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original-wordmark.svg",
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original-wordmark.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original-wordmark.svg"
 ]
 
 export const experience: Experience[] = [
     {
         companyName: "Bloomberg",
         from: "June",
-        to: "present",
+        to: "Aug 2023",
         loc: "Tokyo, Japan",
         role: "Software Engineer Intern",
-        shortDescription: "SWE intern at Feeds APAC Contribs Team",
-        skills: [],
+        shortDescription: "Implemented parser pipeline component for a new company framework that helps process market data into an internal data representation. Achieved a speedup of 150% as a result.",
+        skills: ["C++", "Kafka"],
         iconURL: bloomberg_logo,
     },
     {

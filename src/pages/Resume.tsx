@@ -4,7 +4,7 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import { Grid, Box, Divider, Button, useMediaQuery, IconButton } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import resume from "../assets/KENTA_RESUME_JUNE.pdf";
+import resume from "../assets/Resume_FInal.pdf";
 import ArrowDropUp from "@mui/icons-material/ArrowDropUp";
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 
