@@ -270,6 +270,22 @@ export default function CustomizedTreeView() {
             }
           />
           <StyledTreeItem
+            nodeId="20"
+            label={
+              <Link href="https://haruyoshieats.com" underline="none" color="white" target="_blank">
+                <Typography
+                  sx={{
+                    textDecoration: "underline",
+                    textDecorationColor: "#624CAB",
+                  }}
+                  display="inline"
+                >
+                  Food Blog (for the foodies)
+                </Typography>
+              </Link>
+            }
+          />
+          <StyledTreeItem
             nodeId="12"
             label="Blogs (stay tuned)"
             // label={
