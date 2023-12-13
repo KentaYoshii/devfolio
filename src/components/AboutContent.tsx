@@ -107,8 +107,8 @@ const AboutContent = () => {
               >
                 Software Development
               </Typography>
-              , but also have experience in other areas such as Machine Learning
-              and Cryptography.
+              , but also have experience in other areas such as Machine
+              Learning, Computer Graphics, and Cryptography.
             </Typography>
             <Typography variant="body2">
               Previously, I have worked at{" "}
