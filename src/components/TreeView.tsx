@@ -299,6 +299,7 @@ export default function CustomizedTreeView() {
                   KenBlog 
                 </Typography>
               </Link>
+            }
           />
           <StyledTreeItem
             nodeId="13"
@@ -314,6 +315,7 @@ export default function CustomizedTreeView() {
                   Kenbrary 
                 </Typography>
               </Link>
+            }
           />
           <StyledTreeItem nodeId="6" label="Socials">
             <StyledTreeItem
