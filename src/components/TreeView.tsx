@@ -287,21 +287,33 @@ export default function CustomizedTreeView() {
           />
           <StyledTreeItem
             nodeId="12"
-            label="Blogs (stay tuned)"
-            // label={
-            //   // <Link href="/about" underline="hover" color="white">
-            //     Blogs
-            //   // </Link>
-            // }
+            label={
+              <Link href="https://kenblog.dev" underline="none" color="white" target="_blank">
+                <Typography
+                  sx={{
+                    textDecoration: "underline",
+                    textDecorationColor: "#624CAB",
+                  }}
+                  display="inline"
+                >
+                  KenBlog 
+                </Typography>
+              </Link>
           />
           <StyledTreeItem
             nodeId="13"
-            label="Library (stay tuned)"
-            // label={
-            //   // <Link href="/about" underline="hover" color="white">
-            //     Library
-            //   // </Link>
-            // }
+            label={
+              <Link href="https://kenbrary.xyz" underline="none" color="white" target="_blank">
+                <Typography
+                  sx={{
+                    textDecoration: "underline",
+                    textDecorationColor: "#624CAB",
+                  }}
+                  display="inline"
+                >
+                  Kenbrary 
+                </Typography>
+              </Link>
           />
           <StyledTreeItem nodeId="6" label="Socials">
             <StyledTreeItem
