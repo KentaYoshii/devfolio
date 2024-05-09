@@ -12,7 +12,7 @@ const IPTCPDetail = () => {
         <Box justifyContent="left" display="flex" alignItems="center">
           <Typography variant="caption">
             The code can be found{" "}
-            <Link href="https://github.com/KentaYoshii/ip-tcp" target="_blank">
+            <Link href="https://github.com/KentaYoshii/netstack" target="_blank">
               here
             </Link>
           </Typography>
