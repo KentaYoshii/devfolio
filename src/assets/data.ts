@@ -90,7 +90,7 @@ export const ProjectMap = new Map<string, IProjectDetail>([
         name: "IP-TCP",
         overview: "In Fall 2021, I took a class in Computer Networks at Brown University. As part of that class, I developed an RFC-compliant Internet Protocol (IP) and Transmission Control Protocol (TCP) on top of the said IP",
         stack: ["Golang"],
-        repo: "https://github.com/KentaYoshii/ip-tcp",
+        repo: "https://github.com/KentaYoshii/netstack",
         note: "This project was developed in CS1680 Computer Networks with Joshua Tan (Brown'23) as my partner",
     }],
     ["BigDawsSSH", {
